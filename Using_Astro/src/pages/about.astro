@@ -1,0 +1,47 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+<html lang="en">
+  <head>
+	<meta charset="UTF-8" />
+    <link rel="icon" type="img/svg+xml" href='Icon.svg'/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name ="generator" content= {Astro.generator} >
+	<title>Welcome to Astro</title>
+  </head>
+  <body>
+    <div>
+	<h1>My Astro site</h1>
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    </div>
+    <p><strong>About me</strong><hr>
+        Hi, I'm an Astro developer, and I love building fast, 
+        modern websites with Astro!; Astro is not my first 
+        framework, but it's quickly becoming my favorite.
+    </p>
+  </body>
+  <style>
+    h1 {
+        color: green;
+        text-align: center;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    pre>strong {
+        font-size: 1.3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    pre{
+        display: block;
+    }
+    @media (max) {
+        
+    }
+  </style>
+
+</html>
