@@ -1,34 +1,75 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const skillColor = "teal";
+const fontWeight = "bold";
+const textCase = "uppercase";
+const pageTitle = 'About me';
+
+
+const identity = {
+  firstName: "Josue",
+  country: "El Salvador",
+  occupation: "Student",
+  hobbies: ["math", "technologies", "baseball"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+
+const happy = true;
+const finished = false;
+const goal = 3;
+
+
 ---
+
+
+
 <html lang="en">
+
   <head>
-	<meta charset="UTF-8" />
-    <link rel="icon" type="img/svg+xml" href='Icon.svg'/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name ="generator" content= {Astro.generator} >
-	<title>Welcome to Astro</title>
+    <meta charset="utf-8" />
+    <link rel="icon" href='Icon.svg'/>
+    <meta name="viewport" content="width=device-width" />
+    <title>{pageTitle}</title>
   </head>
   <body>
-    <div>
-	<h1>My Astro site</h1>
     <a href="/">Home</a>
     <a href="/about/">About</a>
     <a href="/blog/">Blog</a>
-    </div>
-    <p><strong>About me</strong><hr>
-        Hi, I'm an Astro developer, and I love building fast, 
-        modern websites with Astro!; Astro is not my first 
-        framework, but it's quickly becoming my favorite.
-    </p>
-  </body>
-  <style>
+    <h1>About Me</h1>
+    <h2>... and my new Astro site!</h2>
+
+    <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
+
+    <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
+    <p>Here are a few facts about me:</p>
+<ul>
+  <li>My name is {identity.firstName}.</li>
+  <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+  {identity.hobbies.length >= 2 &&
+    <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+  }
+</ul>
+<p>My skills are:</p>
+<ol>
+  {skills.map((skill) => <li class="skill">{skill}</li>)}
+</ol>
+<p>{happy && <p>I am happy to be learning Astro!</p>}
+
+{finished && <p>I finished this tutorial!</p>}
+
+{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+ </p> </body>
+</html>
+  <style define:vars={{ skillColor, fontWeight, textCase}}>
     h1 {
-        color: green;
+        color: purple;
+        font-size: 4rem;
         text-align: center;
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
@@ -40,8 +81,10 @@ import Layout from '../layouts/Layout.astro';
     pre{
         display: block;
     }
-    @media (max) {
-        
+    .skill{
+        color:var(--skillColor);
+        font-weight: var(--fontWeight);
+        text-transform: var(--textCase);
     }
   </style>
 
