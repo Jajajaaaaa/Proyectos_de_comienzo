@@ -2,7 +2,7 @@
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
-import navigation from '../components/navigation.astro';
+import Navigation from '../components/navigation.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -16,11 +16,13 @@ const pageTitle = 'HomePage';
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name ="generator" content={Astro.generator}>
 	<title>{pageTitle}</title>
-	<navigation />
+	<Navigation />
   </head>
   <body>
 	<h1>My Astro site</h1>
+	
   </body>
+  <footer></footer>
   <style>
 	h1 {
 		color: green;
