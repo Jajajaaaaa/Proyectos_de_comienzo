@@ -1,25 +1,20 @@
 ---
+import Logo from './Logo.astro';
+import Social from './Social.astro';
 ---
-<div>
-    <img id='logo' src="/Using_Astro/public/Icon" alt="logo">
-
-</div>
+<footer>
+	<Social platform="twitter" username="astrodotbuild" />
+  <Social platform="github" username="Jajajaaaaa" />
+  <Social platform="youtube" username="astrodotbuild" />
+  <Logo />
+</footer>
 <style>
-    div {
-        text-align: center;
-        background-color: rgb(25, 196, 25);
-        color: #555;
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-        bottom: 0;
-        width: 100%;
-        height: 3rem;
-        justify-content: center;
-    }
-    #logo {
-        height: 90%;
-    }
-
-
-    
+  Footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    bottom:0px;
+    height: 3rem;
+    background-color: aqua;
+  }
 </style>

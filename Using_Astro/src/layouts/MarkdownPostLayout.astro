@@ -1,0 +1,10 @@
+---
+const { frontmatter } = Astro.props;
+import Header from "../components/Header.astro";
+---
+<meta charset="utf-8" />
+<link rel="icon" href="../../Icon.svg" />
+<Header/>
+<h1>{frontmatter.title}</h1>
+<p>Written by {frontmatter.author}</p>
+<slot />

@@ -1,12 +1,5 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-import "../styles/global.css";
-import Navigation from '../components/navigation.astro';
-import Footer from '../components/Footer.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from '../layouts/BaseLayout.astro';
 const skillColor = "teal";
 const fontWeight = "bold";
 const textCase = "uppercase";
@@ -19,29 +12,13 @@ const identity = {
   occupation: "Student",
   hobbies: ["math", "technologies", "baseball"],
 };
-
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-
 const happy = true;
 const finished = false;
 const goal = 3;
 
-
 ---
-
-
-
-<html lang="en">
-
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href='Icon.svg'/>
-    <meta name="viewport" content="width=device-width" />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <Navigation />
-    <h1>About Me</h1>
+<BaseLayout pageTitle={pageTitle}>
     <h2>... and my new Astro site!</h2>
 
     <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
@@ -64,7 +41,12 @@ const goal = 3;
 {finished && <p>I finished this tutorial!</p>}
 
 {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
- </p> </body>
+ </p> 
+
+<script>
+import '../scripts/menu.js';
+</script>
+</body>
 </html>
   <style define:vars={{ skillColor, fontWeight, textCase}}>
     h1 {
@@ -87,7 +69,5 @@ const goal = 3;
         text-transform: var(--textCase);
     }
   </style>
-    <Footer />
-
-
-</html>
+  
+</BaseLayout>
