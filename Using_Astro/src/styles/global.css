@@ -5,7 +5,8 @@ html {
 
 body {
   margin: 0 auto;
-  width: 100%;
+  width: 100dvw;
+  height: auto;
   max-width: 80ch;
   padding: 1rem;
   line-height: 1.5;
@@ -82,9 +83,33 @@ h1 {
 body {
 	margin: 0;
 	width: 100dvw;
+  width: 100vw;
+  height: 100vh;
 	height: 100dvh;
   text-align: center;
 	}
-	Footer{
+Footer{
 		bottom:0dvh;
 	}
+html.dark {
+  background-color: #0d0950;
+  color: #fff;
+}
+
+.dark .menu {
+  background-color: #fff;
+  color: #000;
+}
+
+.dark .nav-links a:hover,
+.dark .nav-links a:focus {
+  color: #0d0950;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
+
+.dark a {
+  color: #ff9776;
+}
