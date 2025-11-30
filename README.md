@@ -1,2 +1,2 @@
-# Proyectos-de-comienzo
-Here i post my first proyects, thank you for reading this
+# Proyectos_de_comienzo
+Mis primeros proyectos de Nuxt,Firebase y Astro en github.
